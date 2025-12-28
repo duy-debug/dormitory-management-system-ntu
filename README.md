@@ -1,100 +1,92 @@
-# Hệ Thống Quản Lý Ký Túc Xá
+# Dormitory Management System
 
-## Giới thiệu
-Hệ thống Quản Lý Ký Túc Xá là một ứng dụng Windows Forms được phát triển bằng C# và SQL Server, giúp tự động hóa và quản lý hiệu quả các hoạt động của ký túc xá. Hệ thống cung cấp các công cụ quản lý toàn diện cho ban quản lý ký túc xá, nhân viên và sinh viên.
+## Introduction
+The Dormitory Management System is a Windows Forms application developed using C# and SQL Server. It is designed to automate and efficiently manage dormitory operations, providing comprehensive tools for management, staff, and students.
 
-## Tính năng chính
+## Key Features
 
-### 1. Quản lý Sinh viên
-- Thêm, sửa, xóa thông tin sinh viên
-- Quản lý thông tin cá nhân (họ tên, ngày sinh, giới tính, email, địa chỉ)
-- Theo dõi việc phân phòng
-- Quản lý chính sách ưu tiên
+### 1. Student Management
+- Add, edit, and delete student information.
+- Manage personal details (full name, date of birth, gender, email, address).
+- Track room assignments.
+- Manage priority policies.
 
-### 2. Quản lý Phòng
-- Phân chia và quản lý khu phòng
-- Quản lý các loại phòng
-- Theo dõi tình trạng phòng (trống/đã có người ở)
-- Quản lý giá phòng
+### 2. Room & Area Management
+- Manage dormitory areas (Add, edit, view information).
+- Manage room types and detailed room information.
+- Track room status (available/occupied).
+- Manage room pricing.
 
-### 3. Quản lý Hợp đồng
-- Tạo và quản lý hợp đồng ký túc xá
-- Theo dõi thời hạn hợp đồng
-- Quản lý gia hạn hợp đồng
+### 3. Contract Management
+- Create and manage dormitory residency contracts.
+- Monitor contract expiration dates.
+- Manage contract extensions.
 
-### 4. Quản lý Hóa đơn
-- Tạo và quản lý hóa đơn thanh toán
-- Theo dõi các khoản phí phát sinh
-- Quản lý lịch sử thanh toán
+### 4. Invoice & Billing Management
+- Create and manage invoices for residency fees.
+- Track additional costs (electricity, water, etc.).
+- Maintain payment history.
 
-### 5. Quản lý Nhân viên
-- Quản lý thông tin nhân viên
-- Phân quyền người dùng
-- Theo dõi công việc của nhân viên
-### 6. Quản lý Khu
-- Thêm khu   
-- Sửa thông tin khu
-### 7. Hệ thống Đăng nhập và Phân quyền
-- Xác thực người dùng
-- Phân quyền theo vai trò (sinh viên, nhân viên, quản lý)
-- Bảo mật thông tin
+### 5. Staff Management
+- Manage staff information and profiles.
+- Role-based access control.
+- Monitor staff tasks and assignments.
 
-## Cài đặt
+### 6. Authentication & Authorization
+- Secure user login system.
+- Permission levels for different roles (Student, Staff, Manager).
+- Account security management.
 
-1. Clone repository:
-```bash
-git clone https://github.com/duy-debug/dormitory_management_system.git
-```
+## Installation
 
-2. Cài đặt SQL Server và tạo database:
-- Tạo database mới tên "QLKTX"
-- Restore file backup database (nếu có) hoặc chạy script tạo database
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/duy-debug/dormitory_management_system.git
+   ```
 
-3. Cấu hình connection string:
-- Mở file `DatabaseHelper.cs`
-- Cập nhật connection string phù hợp với cấu hình SQL Server của bạn
+2. **Database Setup:**
+   - Create a new database named `QLKTX` in SQL Server.
+   - Execute the SQL script located at `QuanLyKyTucXa/Db/65.CNTT-1_Nhom2_QLKTX.sql` to generate tables and sample data.
 
-4. Build và chạy project:
-- Mở solution trong Visual Studio 2022
-- Build solution
-- Chạy ứng dụng
+3. **Configure Connection String:**
+   - Open the `DatabaseHelper.cs` file.
+   - Update the connection string to match your local SQL Server configuration.
 
-## Cấu trúc project
+4. **Build and Run:**
+   - Open the `QuanLyKyTucXa.sln` solution in Visual Studio.
+   - Build the solution.
+   - Run the application.
+
+## Project Structure
 
 ```
 QuanLyKyTucXa/
-├── UI/                    # Giao diện người dùng
-│   ├── Forms/            # Các form Windows Forms
-│   └── Controls/         # Custom controls
-├── Models/               # Các model dữ liệu
-├── Db/                   # Xử lý database
-├── Resources/            # Tài nguyên (hình ảnh, icons)
-└── Properties/           # Cấu hình project
+├── UI/                    # User interface (Windows Forms)
+├── Models/               # Data models
+├── Db/                   # Database logic and SQL scripts
+├── Resources/            # Assets (images, icons)
+├── Properties/           # Project configuration
+└── bin/ obj/             # Build output
 ```
 
-## Công nghệ sử dụng
+## Tech Stack
 
-- C# (.NET Framework)
-- Windows Forms
-- SQL Server
-- Entity Framework
-- ADO.NET
+- **Language:** C#
+- **Framework:** .NET Framework (Windows Forms)
+- **Database:** SQL Server
+- **Data Access:** ADO.NET
 
-## Đóng góp
+## Development Team
 
-Mọi đóng góp đều được hoan nghênh! Vui lòng tạo issue hoặc pull request để đóng góp.
+- **Trần Mai Ngọc Duy** (Leader)
+- **Trần Minh Hoàng**
+- **Nguyễn Lê Thùy Linh**
+- **Ngô Văn Lực**
 
-## Liên hệ
+## Contribution
 
-Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào, vui lòng tạo issue trong repository.
+Contributions are welcome! Please feel free to create an issue or submit a pull request.
 
-## Tác giả
+## Acknowledgments
 
--Trần Mai Ngọc Duy (Leader) <br>
--Trần Minh Hoàng<br>
--Nguyễn Lê Thùy Linh<br>
--Ngô Văn Lực<br>
-
-## Lời cảm ơn
-
-Cảm ơn tất cả những người đã đóng góp vào project này. 
+Special thanks to all team members for their hard work and dedication to this project.
